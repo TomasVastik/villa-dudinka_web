@@ -169,12 +169,13 @@
         </section>
         
         <section id="rezervacia">
-            <form>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="1493aaef-66b4-4863-9634-0d680e0df551">
                 <h2>Rezervácia</h2>
-                <input type="text" placeholder="Meno & Priezvisko">
-                <input type="tel" placeholder="Telefónne Číslo">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Vaša Správa"></textarea>
+                <input type="text" name="Meno & Priezvisko" placeholder="Meno & Priezvisko">
+                <input type="tel" name="Telefónne Číslo" placeholder="Telefónne Číslo">
+                <input type="email" name="Email" placeholder="Email">
+                <textarea name="Vaša Správa" placeholder="Vaša Správa"></textarea>
                 <input type="submit" id="odoslat">
             </form>
         </section>
