@@ -1,0 +1,338 @@
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: ;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    box-shadow: 0px 0px 20px black;
+    overflow: hidden;
+    position: relative;
+}
+
+nav a{
+    margin: auto;
+    float: left;
+}
+
+#logo{
+    padding: 7px;
+    display: block;
+    margin: auto;
+    height: 70px;
+}
+
+#odkazy{
+    float: right;
+}
+
+#odkazy a{
+    padding: 30px;
+    display: block;
+    color: #583F74;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#odkazy a:hover{
+    background-color: #E6E6FA;
+}
+
+.hamburger-menu{
+    display: none;
+}
+
+@media screen and (max-width: 750px){
+    #odkazy{
+        display: none;
+    }
+    
+    #odkazy a{
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hamburger-menu{
+        padding: 25px;
+        margin-left: auto;
+        border: none;
+        background-color: white;
+        display: block;
+    }
+    
+    .hamburger-menu span{
+        border-radius: 1px;
+        display: block;
+        width: 35px;
+        height: 7px;
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+        margin-bottom: -5px;
+    }
+    
+    #logo{
+        height: 60px;
+    }
+}
+
+h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+}
+
+.banner{
+    box-shadow: 0px 0px 1000px black inset;
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(images/villa-dudinka_main.jpg);
+}
+
+.banner h1{
+    font-family: Georgia;
+    text-shadow: 0px 0px 10px black;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+.hviezdy i{
+    padding-top: 2%;
+}
+
+.sipka{
+    padding-top: 3%;
+}
+
+.sipka i{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: updown 1.6s;
+    animation-iteration-count: infinite;
+    width: 30px;
+    height: 30px;
+    border-left: 5px solid white;
+    border-bottom: 5px solid white;
+}
+
+@keyframes updown{
+  0% { transform: translate(1px, 0px) rotate(-45deg)}
+  10% { transform: translate(1px, 2px) rotate(-45deg)}
+  20% { transform: translate(1px, 4px) rotate(-45deg)}
+  30% { transform: translate(1px, 6px) rotate(-45deg)}
+  40% { transform: translate(1px, 8px) rotate(-45deg)}
+  50% { transform: translate(1px, 10px) rotate(-45deg)}
+  60% { transform: translate(1px, 8px) rotate(-45deg)}
+  70% { transform: translate(1px, 6px) rotate(-45deg)}
+  80% { transform: translate(1px, 4px) rotate(-45deg)}
+  90% { transform: translate(1px, 2px) rotate(-45deg)}
+  100% { transform: translate(1px, 0px) rotate(-45deg)}
+}
+@media screen and (max-width: 750px){
+    .banner h1{
+        font-size: 30px;
+    }
+    
+    .sipka i{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.vyhody-ubytovania{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vyhody-ubytovania .block{
+    background-color: #967bb6;
+    padding: 2%;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    text-align: center;
+}
+
+.block i{
+    font-size: 35px;
+}
+
+#o-ville{
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    max-width: 85%;
+}
+
+#o-ville h2{
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+}
+
+#o-ville p{
+    font-size: 20px;
+}
+
+#fotogaleria{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #f3f3f3;
+}
+
+.fotky{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#fotogaleria img{
+    margin: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#cennik{
+    padding: 30px;
+}
+
+#cennik table{
+    margin: 10px;
+    width: 750px;
+    max-width: 100%;
+    border: 3px solid #967bb6;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cennik th, #cennik td{
+    border: 1px solid #E6E6FA;
+    padding: 20px;
+}
+
+#cennik th{
+    background-color: #967bb6;
+}
+
+@media screen and (max-width:750px){
+    #cennik td, #cennik th{
+        font-size: 12px;
+    }
+    
+    #cennik th, #cennik td{
+        padding: 10px;
+    }
+}
+
+#rezervacia{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #967bb6;
+}
+
+#rezervacia h2{
+    text-align: center;
+    font-size: 27px;
+}
+
+#rezervacia input, #rezervacia textarea{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    border: none;
+}
+
+#rezervacia input{
+    padding: 5px;
+    font-size: 14px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    max-width: 90%;
+    height: 50px;
+    display: block;
+}
+
+#rezervacia textarea{
+    padding: 5px;
+    font-size: 14px;
+    height: 100px;
+    width: 600px;
+    max-width: 90%;
+}
+
+#odoslat{
+    background-color: yellowgreen;
+}
+
+#kontakt{
+    padding: 20px;
+    background-color: #1b1b1b;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#kontakt .informacie, #kontakt .mapa{
+    flex: 500px
+}
+
+#kontakt .informacie{
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+.informacie h2{
+    font-size: 30px;
+}
+
+.informacie p{
+    font-size: 20px;
+}
+
+.informacie a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.adresa{
+    margin: auto;
+}
+
+iframe{
+    margin: auto;
+    height: 350px;
+    width: 650px;
+    max-width: 100%;
+}
+
+footer{
+    padding: 5px;
+    text-align: center;
+    color: white;
+    background-color: #101010;
+}
