@@ -1,30 +1,35 @@
 *{
+    box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body{
-    background-color: ;
+    position: relative;
+    z-index: 9999;
+    padding-top: 80px;
+    background-color: white;
     font-family: sans-serif;
     margin: 0;
-    padding: 0;
 }
 
-nav{
-    box-shadow: 0px 0px 20px black;
-    overflow: hidden;
-    position: relative;
+#topnav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    background-color: white;
 }
 
-nav a{
-    margin: auto;
+#topnav a{
     float: left;
 }
 
 #logo{
-    padding: 7px;
-    display: block;
-    margin: auto;
-    height: 70px;
+    padding: 10px;
+    height: 80px;
 }
 
 #odkazy{
@@ -32,52 +37,52 @@ nav a{
 }
 
 #odkazy a{
-    padding: 30px;
     display: block;
     color: #583F74;
     text-decoration: none;
     font-size: 20px;
+    padding: 28.5px;
 }
 
 #odkazy a:hover{
-    background-color: #E6E6FA;
+    background-color: whitesmoke;
 }
 
 .hamburger-menu{
     display: none;
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 1000px) {
     #odkazy{
-        display: none;
-    }
-    
-    #odkazy a{
-        padding: 15px;
-        width: 100%;
+        z-index: 100;
         text-align: center;
+        top: 80px;
+        display: none;
+        position: absolute;
+        width: 100%;
     }
-    
-    .hamburger-menu{
-        padding: 25px;
-        margin-left: auto;
-        border: none;
+
+    #odkazy a{
         background-color: white;
+        padding: 10px;
+        float: none;
         display: block;
+    }    
+
+    .hamburger-menu{
+        padding: 18.5px;
+        background: none;
+        border: none;
+        display: block;
+        float: right;
     }
-    
+
     .hamburger-menu span{
-        border-radius: 1px;
         display: block;
-        width: 35px;
-        height: 7px;
-        border-top: 5px solid black;
-        border-bottom: 5px solid black;
-        margin-bottom: -5px;
-    }
-    
-    #logo{
-        height: 60px;
+        width: 40px;
+        height: 5px;
+        background-color: #101010;
+        margin: 7px;
     }
 }
 
@@ -88,25 +93,32 @@ h2{
 }
 
 .banner{
-    box-shadow: 0px 0px 1000px black inset;
-    background-size: cover;
     padding-top: 10%;
-    padding-bottom: 50px;
+    padding-bottom: 2%;
     background-repeat: no-repeat;
-    background-position: center;
+    width: 100%;
+    background-size: cover;
+    box-shadow: 0px 0px 1000px black inset;
+    background-repeat: no-repeat;
+    background-position: 65%;
     background-image: url(images/villa-dudinka_main.jpg);
 }
 
 .banner h1{
-    font-family: Georgia;
+    font-style: italic;
+    font-family: Courier;
     text-shadow: 0px 0px 10px black;
     font-size: 40px;
     color: white;
     text-align: center;
 }
 
-.hviezdy i{
-    padding-top: 2%;
+.stars{
+    padding-bottom: 13%;
+    text-shadow: 0px 0px 10px gray;
+    font-size: 35px;
+    color: #F5F5DC;
+    text-align: center;
 }
 
 .sipka{
@@ -114,6 +126,7 @@ h2{
 }
 
 .sipka i{
+    position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -138,28 +151,50 @@ h2{
   90% { transform: translate(1px, 2px) rotate(-45deg)}
   100% { transform: translate(1px, 0px) rotate(-45deg)}
 }
-@media screen and (max-width: 750px){
+@media screen and (max-width: 1000px){
+    .banner{
+        padding-top: 1%;
+    }
+
     .banner h1{
+        padding-top: 15%;
         font-size: 30px;
     }
     
-    .sipka i{
-        width: 20px;
-        height: 20px;
+    .stars {
+        font-size: 30px;
+    }
+
+    .vyhody-ubytovania{
+        height: 250px;
+    }
+
+    .vyhody-ubytovania .block{
+        padding: 0px;
+        display: inline-flex;
+    }
+
+    .vyhody-ubytovania .block i{
+        margin-top: auto;
+        margin-bottom: auto;
+        display: block;
+    }
+
+    #kontakt iframe{
+        height: 250px;
     }
 }
 
 .vyhody-ubytovania{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 60px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255, 0.7);
     display: flex;
     flex-wrap: wrap;
 }
 
 .vyhody-ubytovania .block{
-    background-color: #967bb6;
-    padding: 2%;
-    margin: 10px;
+    padding: 6px;
     margin-left: auto;
     margin-right: auto;
     width: 300px;
@@ -167,21 +202,18 @@ h2{
 }
 
 .block i{
+    color: #101010;
     font-size: 35px;
 }
 
 #o-ville{
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: justify;
     margin-left: auto;
     margin-right: auto;
-    width: 900px;
-    max-width: 85%;
-}
-
-#o-ville h2{
-    text-transform: uppercase;
-    font-size: 30px;
-    text-align: center;
+    width: 95%;
+    max-width: 900px;
 }
 
 #o-ville p{
@@ -210,18 +242,19 @@ h2{
     margin-right: auto;
     width: 300px;
     max-width: 100%;
-    height: 200px;
     object-fit: cover;
 }
 
 #cennik{
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 #cennik table{
+    text-align: center;
     margin: 10px;
-    width: 750px;
-    max-width: 100%;
+    width: 95%;
+    max-width: 900px;
     border: 3px solid #967bb6;
     border-collapse: collapse;
     margin-left: auto;
@@ -237,13 +270,18 @@ h2{
     background-color: #967bb6;
 }
 
-@media screen and (max-width:750px){
+@media screen and (max-width: 1000px){
     #cennik td, #cennik th{
         font-size: 12px;
-    }
-    
-    #cennik th, #cennik td{
         padding: 10px;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+
+    #o-ville p{
+        font-size: 15px;
     }
 }
 
@@ -253,50 +291,41 @@ h2{
     background-color: #967bb6;
 }
 
-#rezervacia h2{
-    text-align: center;
-    font-size: 27px;
-}
-
-#rezervacia input, #rezervacia textarea{
+#rezervacia input, #rezervacia textarea, #submit{
     margin-right: auto;
     margin-left: auto;
     display: block;
     border: none;
-}
-
-#rezervacia input{
     padding: 5px;
     font-size: 14px;
-    margin: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-    max-width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 95%;
+    max-width: 750px;
     height: 50px;
-    display: block;
 }
 
 #rezervacia textarea{
-    padding: 5px;
-    font-size: 14px;
-    height: 100px;
-    width: 600px;
-    max-width: 90%;
+    height: 150px;
 }
 
-#odoslat{
-    background-color: yellowgreen;
+#submit{
+    font-weight: bold;
+    background-color: rgb(154, 205, 50);
+}
+
+#submit:hover{
+    background-color: rgb(104, 140, 31);;
 }
 
 #kontakt{
-    padding: 20px;
     background-color: #1b1b1b;
     display: flex;
     flex-wrap: wrap;
 }
 
 #kontakt .informacie, #kontakt .mapa{
+    padding: 20px;
     flex: 500px
 }
 
@@ -304,10 +333,6 @@ h2{
     color: white;
     margin: auto;
     text-align: center;
-}
-
-.informacie h2{
-    font-size: 30px;
 }
 
 .informacie p{
@@ -330,9 +355,16 @@ iframe{
     max-width: 100%;
 }
 
-footer{
+.autor{
     padding: 5px;
     text-align: center;
     color: white;
     background-color: #101010;
+    width: 100%;
+}
+
+.autor a{
+    font-weight: bold;
+    color: #583F74;
+    text-decoration: none;
 }
