@@ -174,10 +174,6 @@ h2{
     font-size: 35px;
 }
 
-.vyhody-ubytovania p{
-    width: 300px;
-}
-
 #o-ville{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -299,7 +295,6 @@ h2{
 
 #kontakt{
     padding-top: 20px;
-    padding-bottom: 20px;
     background-color: #1b1b1b;
     display: flex;
     flex-wrap: wrap;
