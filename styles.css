@@ -163,6 +163,7 @@ h2{
 }
 
 .vyhody-ubytovania .block{
+    width: 300px;
     padding: 6px;
     margin-left: auto;
     margin-right: auto;
@@ -180,7 +181,7 @@ h2{
     text-align: justify;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
+    width: 90%;
     max-width: 900px;
 }
 
