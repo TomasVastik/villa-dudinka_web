@@ -4,6 +4,11 @@
     scroll-padding-top: 80px;
 }
 
+@font-face {
+    font-family: Dancing Script;
+    src: url('DancingScript-VariableFont_wght.ttf');
+}
+
 body{
     position: relative;
     z-index: 9999;
@@ -14,6 +19,7 @@ body{
 }
 
 #topnav{
+    box-shadow: 0px 0px 10px black;
     position: fixed;
     top: 0;
     left: 0;
@@ -105,52 +111,21 @@ h2{
 }
 
 .banner h1{
-    font-style: italic;
-    font-family: Courier;
+    font-family: Dancing Script, Courier;
     text-shadow: 0px 0px 10px black;
-    font-size: 40px;
+    font-size: 60px;
     color: white;
     text-align: center;
 }
 
 .stars{
-    padding-bottom: 13%;
-    text-shadow: 0px 0px 10px gray;
-    font-size: 35px;
+    padding-bottom: 5%;
+    text-shadow: 0px 0px 20px gray;
+    font-size: 40px;
     color: #F5F5DC;
     text-align: center;
 }
 
-.sipka{
-    padding-top: 3%;
-}
-
-.sipka i{
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    animation: updown 1.6s;
-    animation-iteration-count: infinite;
-    width: 30px;
-    height: 30px;
-    border-left: 5px solid white;
-    border-bottom: 5px solid white;
-}
-
-@keyframes updown{
-  0% { transform: translate(1px, 0px) rotate(-45deg)}
-  10% { transform: translate(1px, 2px) rotate(-45deg)}
-  20% { transform: translate(1px, 4px) rotate(-45deg)}
-  30% { transform: translate(1px, 6px) rotate(-45deg)}
-  40% { transform: translate(1px, 8px) rotate(-45deg)}
-  50% { transform: translate(1px, 10px) rotate(-45deg)}
-  60% { transform: translate(1px, 8px) rotate(-45deg)}
-  70% { transform: translate(1px, 6px) rotate(-45deg)}
-  80% { transform: translate(1px, 4px) rotate(-45deg)}
-  90% { transform: translate(1px, 2px) rotate(-45deg)}
-  100% { transform: translate(1px, 0px) rotate(-45deg)}
-}
 @media screen and (max-width: 1000px){
     .banner{
         padding-top: 1%;
@@ -158,26 +133,21 @@ h2{
 
     .banner h1{
         padding-top: 15%;
-        font-size: 30px;
+        font-size: 40px;
     }
     
     .stars {
         font-size: 30px;
     }
 
-    .vyhody-ubytovania{
-        height: 250px;
-    }
-
     .vyhody-ubytovania .block{
-        padding: 0px;
         display: inline-flex;
     }
 
     .vyhody-ubytovania .block i{
+        padding: 20px;
         margin-top: auto;
         margin-bottom: auto;
-        display: block;
     }
 
     #kontakt iframe{
@@ -196,13 +166,16 @@ h2{
     padding: 6px;
     margin-left: auto;
     margin-right: auto;
-    width: 300px;
     text-align: center;
 }
 
 .block i{
     color: #101010;
     font-size: 35px;
+}
+
+.vyhody-ubytovania p{
+    width: 300px;
 }
 
 #o-ville{
@@ -245,8 +218,8 @@ h2{
 }
 
 #cennik{
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #cennik table{
@@ -270,7 +243,13 @@ h2{
 }
 
 @media screen and (max-width: 1000px){
-    #cennik td, #cennik th{
+    #cennik th{
+        color: white;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #cennik td{
         font-size: 12px;
         padding: 10px;
     }
@@ -285,6 +264,8 @@ h2{
 }
 
 #rezervacia{
+    text-shadow: 0px 0px 10px black;
+    color: white;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #967bb6;
@@ -309,15 +290,16 @@ h2{
 }
 
 #submit{
-    font-weight: bold;
-    background-color: rgb(154, 205, 50);
+    background-color: #9acd32;
 }
 
 #submit:hover{
-    background-color: rgb(104, 140, 31);;
+    background-color: #8ab82d;
 }
 
 #kontakt{
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: #1b1b1b;
     display: flex;
     flex-wrap: wrap;
